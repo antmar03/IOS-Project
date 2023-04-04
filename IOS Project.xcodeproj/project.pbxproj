@@ -16,6 +16,10 @@
 		B46AC87129DC7B6300370BBA /* IOS_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC87029DC7B6300370BBA /* IOS_ProjectTests.swift */; };
 		B46AC87B29DC7B6300370BBA /* IOS_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC87A29DC7B6300370BBA /* IOS_ProjectUITests.swift */; };
 		B46AC87D29DC7B6300370BBA /* IOS_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC87C29DC7B6300370BBA /* IOS_ProjectUITestsLaunchTests.swift */; };
+		B46AC88A29DC7DA600370BBA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC88929DC7DA600370BBA /* SplashViewController.swift */; };
+		B46AC88C29DC7DC600370BBA /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC88B29DC7DC600370BBA /* AddContactViewController.swift */; };
+		B46AC88E29DC7DF400370BBA /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC88D29DC7DF400370BBA /* ContactsViewController.swift */; };
+		B46AC89029DC7E0500370BBA /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC88F29DC7E0500370BBA /* CreditsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		B46AC87629DC7B6300370BBA /* IOS ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46AC87A29DC7B6300370BBA /* IOS_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_ProjectUITests.swift; sourceTree = "<group>"; };
 		B46AC87C29DC7B6300370BBA /* IOS_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B46AC88929DC7DA600370BBA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B46AC88B29DC7DC600370BBA /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		B46AC88D29DC7DF400370BBA /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		B46AC88F29DC7E0500370BBA /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				B46AC86229DC7B6300370BBA /* Assets.xcassets */,
 				B46AC86429DC7B6300370BBA /* LaunchScreen.storyboard */,
 				B46AC86729DC7B6300370BBA /* Info.plist */,
+				B46AC88929DC7DA600370BBA /* SplashViewController.swift */,
+				B46AC88B29DC7DC600370BBA /* AddContactViewController.swift */,
+				B46AC88D29DC7DF400370BBA /* ContactsViewController.swift */,
+				B46AC88F29DC7E0500370BBA /* CreditsViewController.swift */,
 			);
 			path = "IOS Project";
 			sourceTree = "<group>";
@@ -258,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46AC88C29DC7DC600370BBA /* AddContactViewController.swift in Sources */,
+				B46AC89029DC7E0500370BBA /* CreditsViewController.swift in Sources */,
 				B46AC85E29DC7B6200370BBA /* ViewController.swift in Sources */,
 				B46AC85A29DC7B6200370BBA /* AppDelegate.swift in Sources */,
 				B46AC85C29DC7B6200370BBA /* SceneDelegate.swift in Sources */,
+				B46AC88A29DC7DA600370BBA /* SplashViewController.swift in Sources */,
+				B46AC88E29DC7DF400370BBA /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
