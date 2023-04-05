@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UITabBarController {
 
+    var db = DBManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

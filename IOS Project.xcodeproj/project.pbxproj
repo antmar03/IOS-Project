@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B427489A29DDC0C9007082FE /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427489929DDC0C9007082FE /* DBManager.swift */; };
+		B427489C29DDC0F7007082FE /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427489B29DDC0F7007082FE /* Contact.swift */; };
 		B46AC85A29DC7B6200370BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC85929DC7B6200370BBA /* AppDelegate.swift */; };
 		B46AC85C29DC7B6200370BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC85B29DC7B6200370BBA /* SceneDelegate.swift */; };
 		B46AC85E29DC7B6200370BBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC85D29DC7B6200370BBA /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B427489929DDC0C9007082FE /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		B427489B29DDC0F7007082FE /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		B46AC85629DC7B6200370BBA /* IOS Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46AC85929DC7B6200370BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B46AC85B29DC7B6200370BBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 		B46AC84D29DC7B6200370BBA = {
 			isa = PBXGroup;
 			children = (
+				B427489B29DDC0F7007082FE /* Contact.swift */,
 				B46AC85829DC7B6200370BBA /* IOS Project */,
 				B46AC86F29DC7B6300370BBA /* IOS ProjectTests */,
 				B46AC87929DC7B6300370BBA /* IOS ProjectUITests */,
@@ -118,6 +123,7 @@
 				B46AC88B29DC7DC600370BBA /* AddContactViewController.swift */,
 				B46AC88D29DC7DF400370BBA /* ContactsViewController.swift */,
 				B46AC88F29DC7E0500370BBA /* CreditsViewController.swift */,
+				B427489929DDC0C9007082FE /* DBManager.swift */,
 			);
 			path = "IOS Project";
 			sourceTree = "<group>";
@@ -270,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B427489C29DDC0F7007082FE /* Contact.swift in Sources */,
 				B46AC88C29DC7DC600370BBA /* AddContactViewController.swift in Sources */,
 				B46AC89029DC7E0500370BBA /* CreditsViewController.swift in Sources */,
 				B46AC85E29DC7B6200370BBA /* ViewController.swift in Sources */,
+				B427489A29DDC0C9007082FE /* DBManager.swift in Sources */,
 				B46AC85A29DC7B6200370BBA /* AppDelegate.swift in Sources */,
 				B46AC85C29DC7B6200370BBA /* SceneDelegate.swift in Sources */,
 				B46AC88A29DC7DA600370BBA /* SplashViewController.swift in Sources */,
