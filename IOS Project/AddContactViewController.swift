@@ -8,14 +8,33 @@
 import UIKit
 
 class AddContactViewController: UIViewController {
-
+    var db = DBManager()
+    
+    //text fields
+    @IBOutlet weak var fNameField: UITextField!
+    
+    @IBOutlet weak var lNameField: UITextField!
+    
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBOutlet weak var addressField: UITextField!
+    
+    @IBOutlet weak var phoneField: UITextField!
+    
+    @IBOutlet weak var notesField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onAddContact(_ sender: UIButton) {
+        db.insert(first_name: fNameField.text!, last_name: lNameField.text!, email: emailField.text!, address: addressField.text!, phone: phoneField.text!, notes: notesField.text!)
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 

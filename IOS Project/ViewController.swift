@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UITabBarController {
 
-    var db = DBManager()
+    //var db = DBManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()

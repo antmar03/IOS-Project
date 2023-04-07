@@ -16,8 +16,9 @@ class Contact {
     var email: String = "";
     var address: String = "";
     var phone: String = "";
+    var notes: String = "";
     
-    init(id:Int, first_name:String, last_name:String, email: String, address: String, phone: String) {
+    init(id:Int, first_name:String, last_name:String, email: String, address: String, phone: String, notes: String) {
         
         self.id = id;
         self.first_name = first_name;
@@ -26,6 +27,7 @@ class Contact {
         self.email = email;
         self.address = address;
         self.phone = phone;
+        self.notes = notes;
     }
     
 }

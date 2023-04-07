@@ -36,7 +36,7 @@ class DBManager {
     }
     
     func createTable() {
-        let createTableString = "CREATE TABLE IF NOT EXISTS contacts(Id INTEGER AUTO_INCREMENT PRIMARY KEY, first_name TEXT, last_name TEXT, email TEXT, address TEXT, phone TEXT);"
+        let createTableString = "CREATE TABLE IF NOT EXISTS contacts(Id INTEGER AUTO_INCREMENT PRIMARY KEY, first_name TEXT, last_name TEXT, email TEXT, address TEXT, phone TEXT, notes, TEXT);"
         var createTableStatement: OpaquePointer? = nil
         //prepare the database for the statement
         if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK
@@ -54,11 +54,11 @@ class DBManager {
         sqlite3_finalize(createTableStatement)
     }
     
-    func insert(first_name:String, last_name:String, email:String, address:String, phone:String)
+    func insert(first_name:String, last_name:String, email:String, address:String, phone:String, notes:String)
         {
             //let data = read()
 
-            let insertStatementString = "INSERT INTO contacts (first_name, last_name, email, address, phone) VALUES (?, ?, ?, ?, ?);"
+            let insertStatementString = "INSERT INTO contacts (first_name, last_name, email, address, phone, notes) VALUES (?, ?, ?, ?, ?, ?);"
             var insertStatement: OpaquePointer? = nil
             if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
                 //bind the values to the parameters
@@ -66,7 +66,9 @@ class DBManager {
                 sqlite3_bind_text(insertStatement, 2, (last_name as NSString).utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement, 3, (email as NSString).utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement, 4, (address as NSString).utf8String, -1, nil)
-                sqlite3_bind_text(insertStatement, 5, (phone as NSString).utf8String, -1, nil)               //run query
+                sqlite3_bind_text(insertStatement, 5, (phone as NSString).utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement, 6, (notes as NSString).utf8String, -1, nil)
+                //run query
                 if sqlite3_step(insertStatement) == SQLITE_DONE {
                     print("Successfully inserted row.")
                 } else {
@@ -94,9 +96,10 @@ class DBManager {
                    let email = String(describing: String(cString: sqlite3_column_text(queryStatement, 3)))
                    let address = String(describing: String(cString: sqlite3_column_text(queryStatement, 4)))
                    let phone = String(describing: String(cString: sqlite3_column_text(queryStatement, 5)))
+                   let notes = String(describing: String(cString: sqlite3_column_text(queryStatement, 6)))
                    
                    
-                   dataset.append(Contact(id: Int(id), first_name: first_name, last_name: last_name, email: email, address: address, phone: phone))
+                   dataset.append(Contact(id: Int(id), first_name: first_name, last_name: last_name, email: email, address: address, phone: phone, notes: notes))
                }
            } else {
                print("SELECT statement could not be prepared")
