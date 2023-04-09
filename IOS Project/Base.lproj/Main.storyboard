@@ -647,7 +647,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Edit Contact"/>
                                 <connections>
-                                    <action selector="onAddContact:" destination="Qmi-b3-xIO" eventType="touchUpInside" id="qlH-oR-6pR"/>
+                                    <action selector="OnEditClick:" destination="Qmi-b3-xIO" eventType="touchUpInside" id="Msn-FW-oKc"/>
                                 </connections>
                             </button>
                         </subviews>

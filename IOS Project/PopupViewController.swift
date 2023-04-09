@@ -14,6 +14,7 @@ class PopupViewController: UIViewController {
     var address: String?
     var phone: String?
     var notes: String?
+    var id: Int?
 
     @IBOutlet weak var fnameLabel: UILabel!
     @IBOutlet weak var lnameLabel: UILabel!
@@ -52,6 +53,7 @@ class PopupViewController: UIViewController {
             vc.address = address
             vc.phone = phone
             vc.notes = notes
+            vc.id = id
             
         }
     }

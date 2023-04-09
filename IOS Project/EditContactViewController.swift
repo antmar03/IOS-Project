@@ -14,6 +14,9 @@ class EditContactViewController: UIViewController {
     var address: String?
     var phone: String?
     var notes: String?
+    var id: Int?
+    
+    let db = DBManager()
     
     @IBOutlet weak var notesLabel: UITextField!
     @IBOutlet weak var phoneLabel: UITextField!
@@ -35,7 +38,11 @@ class EditContactViewController: UIViewController {
         
     }
     
-
+    @IBAction func OnEditClick(_ sender: UIButton) {
+        db.edit(first_name: fnameLabel.text!, last_name: lnameLabel.text!, email: emailLabel.text!, address: addressLabel.text!, phone: phoneLabel.text!, notes: notesLabel.text!, id: id!)
+        dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

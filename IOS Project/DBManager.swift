@@ -36,7 +36,7 @@ class DBManager {
     }
     
     func createTable() {
-        let createTableString = "CREATE TABLE IF NOT EXISTS contacts(Id INTEGER AUTO_INCREMENT PRIMARY KEY, first_name TEXT, last_name TEXT, email TEXT, address TEXT, phone TEXT, notes, TEXT);"
+        let createTableString = "CREATE TABLE IF NOT EXISTS contacts(Id INTEGER AUTO_INCREMENT PRIMARY KEY, first_name TEXT, last_name TEXT, email TEXT, address TEXT, phone TEXT, notes TEXT);"
         var createTableStatement: OpaquePointer? = nil
         //prepare the database for the statement
         if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK
@@ -80,6 +80,23 @@ class DBManager {
             sqlite3_finalize(insertStatement)
         }
     
+    func edit(first_name:String, last_name:String, email:String, address:String, phone:String, notes:String, id:Int) {
+        
+        let editStatementSql = "UPDATE contacts SET first_name = '\(first_name)', last_name = '\(last_name)', email = '\(email)', address = '\(address)', phone = '\(phone)', notes = '\(notes)' WHERE id = \(id)"
+        var editStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, editStatementSql, -1, &editStatement, nil) == SQLITE_OK {
+
+            //run query
+            if sqlite3_step(editStatement) == SQLITE_DONE {
+                print("Successfully edited row.")
+            } else {
+                print("Could not edit row.")
+            }
+        } else {
+            print("UPDATE statement could not be prepared.")
+        }
+        sqlite3_finalize(editStatement)
+    }
     
     
     func read() -> [Contact] {

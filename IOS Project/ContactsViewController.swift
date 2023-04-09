@@ -52,6 +52,7 @@ extension ContactsViewController: UITableViewDelegate {
         popupVC.address = contact.address
         popupVC.phone = contact.phone
         popupVC.notes = contact.notes
+        popupVC.id = contact.id
         
         self.addChild(popupVC)
         popupVC.view.frame = self.view.frame
@@ -76,7 +77,6 @@ extension ContactsViewController: UITableViewDataSource {
         let address = currentContact.address
         let phone = currentContact.phone
         let notes = currentContact.notes
-        
         
         cell.textLabel?.text = "ID: \(id)\nFirst Name: \(first_name) \nLast Name: \(last_name)\nEmail: \(email) Phone: \(phone)\nAddress: \(address)\nNotes: \(notes)"
         
