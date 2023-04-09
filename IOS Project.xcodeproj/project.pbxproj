@@ -22,6 +22,7 @@
 		B46AC88C29DC7DC600370BBA /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC88B29DC7DC600370BBA /* AddContactViewController.swift */; };
 		B46AC88E29DC7DF400370BBA /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC88D29DC7DF400370BBA /* ContactsViewController.swift */; };
 		B46AC89029DC7E0500370BBA /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46AC88F29DC7E0500370BBA /* CreditsViewController.swift */; };
+		B4C2BF9329E370B8001E2BE3 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C2BF9229E370B8001E2BE3 /* EditContactViewController.swift */; };
 		B4CCC58D29E3174100E58B99 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCC58C29E3174100E58B99 /* PopupViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		B46AC88B29DC7DC600370BBA /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		B46AC88D29DC7DF400370BBA /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		B46AC88F29DC7E0500370BBA /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		B4C2BF9229E370B8001E2BE3 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
 		B4CCC58C29E3174100E58B99 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 				B46AC88F29DC7E0500370BBA /* CreditsViewController.swift */,
 				B427489929DDC0C9007082FE /* DBManager.swift */,
 				B4CCC58C29E3174100E58B99 /* PopupViewController.swift */,
+				B4C2BF9229E370B8001E2BE3 /* EditContactViewController.swift */,
 			);
 			path = "IOS Project";
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				B46AC85C29DC7B6200370BBA /* SceneDelegate.swift in Sources */,
 				B46AC88A29DC7DA600370BBA /* SplashViewController.swift in Sources */,
 				B46AC88E29DC7DF400370BBA /* ContactsViewController.swift in Sources */,
+				B4C2BF9329E370B8001E2BE3 /* EditContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

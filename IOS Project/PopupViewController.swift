@@ -37,7 +37,25 @@ class PopupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onCloseClick(_ sender: UIButton) {
+        view.removeFromSuperview()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "segueShowEdit") {
 
+            let vc = segue.destination as! EditContactViewController
+                
+            vc.first_name = first_name
+            vc.last_name = last_name
+            vc.email = email
+            vc.address = address
+            vc.phone = phone
+            vc.notes = notes
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
