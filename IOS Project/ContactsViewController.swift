@@ -41,6 +41,24 @@ extension ContactsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let popupVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popupBoard") as! PopupViewController
+        let contact = contacts[indexPath.row]
+        
+        popupVC.first_name = contact.first_name
+        popupVC.last_name = contact.last_name
+        popupVC.email = contact.email
+        popupVC.address = contact.address
+        popupVC.phone = contact.phone
+        popupVC.notes = contact.notes
+        
+        self.addChild(popupVC)
+        popupVC.view.frame = self.view.frame
+        self.view.addSubview(popupVC.view)
+        popupVC.didMove(toParent: self)
+        
+    }
 }
 
 extension ContactsViewController: UITableViewDataSource {
@@ -67,3 +85,4 @@ extension ContactsViewController: UITableViewDataSource {
         return cell
     }
 }
+
