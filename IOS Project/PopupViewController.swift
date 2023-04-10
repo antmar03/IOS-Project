@@ -25,6 +25,8 @@ class PopupViewController: UIViewController {
     
     @IBOutlet weak var notesLabel: UILabel!
     
+    let db = DBManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +36,6 @@ class PopupViewController: UIViewController {
         addressLabel.text = address
         phoneLabel.text = phone
         notesLabel.text = notes
-        
         // Do any additional setup after loading the view.
     }
     
@@ -42,11 +43,39 @@ class PopupViewController: UIViewController {
         view.removeFromSuperview()
     }
     
+    func deleteHandler(aler: UIAlertAction!) {
+     
+    }
+    
+    @IBAction func onDeleteClick(_ sender: UIButton) {
+        let msg = "Are you sure you want to delete this?\nThis cannot be undone!!"
+        
+        let alert = UIAlertController(title: "Are You Sure?", message: msg, preferredStyle: .alert)
+        
+        //use handler to run code when yes is completed
+        let yes = UIAlertAction(title: "Yes", style: .default,handler: {_ in
+            self.db.deleteContact(id: self.id ?? -1)
+            print("deleted id \(String(describing: self.id))")
+        })
+        
+        let no = UIAlertAction(title: "No", style: .destructive, handler: {_ in
+            print("cancelled")
+        })
+        
+            
+        
+        
+        alert.addAction(yes);
+        alert.addAction(no);
+        present(alert, animated: false)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "segueShowEdit") {
 
             let vc = segue.destination as! EditContactViewController
-                
+            
+            //set the values in the segue
             vc.first_name = first_name
             vc.last_name = last_name
             vc.email = email

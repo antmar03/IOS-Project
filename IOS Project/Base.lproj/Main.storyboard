@@ -446,6 +446,15 @@
                                     <segue destination="Qmi-b3-xIO" kind="show" identifier="segueShowEdit" id="fzH-YI-zH8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8l-9B-3Mf">
+                                <rect key="frame" x="277" y="63" width="74" height="35"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Delete"/>
+                                <connections>
+                                    <action selector="onDeleteClick:" destination="lob-m0-vqG" eventType="touchUpInside" id="Qy6-Vx-YHg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KuZ-OP-bas"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -454,6 +463,7 @@
                             <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="53x-d8-LiK" secondAttribute="trailing" constant="170" id="3Ys-mf-ne9"/>
                             <constraint firstItem="IBM-tY-adX" firstAttribute="top" secondItem="ni3-uL-P7y" secondAttribute="bottom" constant="8" symbolic="YES" id="3aC-DL-agP"/>
                             <constraint firstItem="3dC-VU-9ZW" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="77" id="6cb-Qs-WaV"/>
+                            <constraint firstItem="F8l-9B-3Mf" firstAttribute="top" secondItem="KuZ-OP-bas" secondAttribute="top" constant="63" id="7Ar-JE-fch"/>
                             <constraint firstItem="p5h-v5-Hid" firstAttribute="leading" secondItem="OG7-fA-EEu" secondAttribute="trailing" constant="45" id="8jX-WS-7Qf"/>
                             <constraint firstItem="Ude-U4-owS" firstAttribute="top" secondItem="ye5-BV-eli" secondAttribute="bottom" constant="8" symbolic="YES" id="Emv-wK-tqr"/>
                             <constraint firstItem="ni3-uL-P7y" firstAttribute="top" secondItem="KuZ-OP-bas" secondAttribute="top" constant="117" id="FXD-FU-huv"/>
@@ -467,6 +477,7 @@
                             <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="sNn-nK-avw" secondAttribute="trailing" constant="78" id="Wev-n3-XEu"/>
                             <constraint firstItem="ye5-BV-eli" firstAttribute="top" secondItem="3dC-VU-9ZW" secondAttribute="bottom" constant="8" symbolic="YES" id="XUI-Tt-UAY"/>
                             <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="nTS-Ik-bbv" secondAttribute="trailing" constant="265" id="ZJ8-X7-Swp"/>
+                            <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="F8l-9B-3Mf" secondAttribute="trailing" constant="42" id="aPz-Pd-4oe"/>
                             <constraint firstItem="ni3-uL-P7y" firstAttribute="leading" secondItem="3dC-VU-9ZW" secondAttribute="trailing" constant="11" id="bhA-7T-N7g"/>
                             <constraint firstItem="iGV-cz-qqG" firstAttribute="leading" secondItem="Ppn-k2-Ua7" secondAttribute="trailing" constant="30" id="eBL-Oc-Son"/>
                             <constraint firstItem="53x-d8-LiK" firstAttribute="top" secondItem="sNn-nK-avw" secondAttribute="bottom" constant="78" id="eYC-hc-AYe"/>
@@ -707,6 +718,9 @@
         <image name="Logo" width="1144" height="266.66665649414062"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

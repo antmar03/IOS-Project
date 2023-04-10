@@ -98,6 +98,25 @@ class DBManager {
         sqlite3_finalize(editStatement)
     }
     
+    func deleteContact(id:Int) {
+        let deleteStatementSql = "DELETE FROM contacts WHERE Id = ?;"
+        
+        var deleteStatement: OpaquePointer? = nil
+        
+        if sqlite3_prepare_v2(db, deleteStatementSql, -1, &deleteStatement, nil) == SQLITE_OK {
+            sqlite3_bind_int(deleteStatement, 1, Int32(id))
+            if sqlite3_step(deleteStatement) == SQLITE_DONE {
+                print("Deleted row successfully")
+            }else {
+                print("Could not delete the row")
+            }
+        }else {
+            print("DELETE statement couldn't be prepared")
+        }
+        
+        sqlite3_finalize(deleteStatement)
+    }
+    
     
     func read() -> [Contact] {
            let queryStatementString = "SELECT * FROM contacts;"
