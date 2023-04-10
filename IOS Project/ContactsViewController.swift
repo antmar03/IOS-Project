@@ -20,9 +20,17 @@ class ContactsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        //tableView.reloadData()
+        
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //reload the data from the database
+        contacts = db.read()
+        tableView.reloadData()
+    }
 
     /*
     // MARK: - Navigation
@@ -54,6 +62,7 @@ extension ContactsViewController: UITableViewDelegate {
         popupVC.notes = contact.notes
         popupVC.id = contact.id
         
+        //I need to change this to a segue lol
         self.addChild(popupVC)
         popupVC.view.frame = self.view.frame
         self.view.addSubview(popupVC.view)
@@ -80,6 +89,7 @@ extension ContactsViewController: UITableViewDataSource {
         
         cell.textLabel?.text = "ID: \(id)\nFirst Name: \(first_name) \nLast Name: \(last_name)\nEmail: \(email) Phone: \(phone)\nAddress: \(address)\nNotes: \(notes)"
         
+        //this makes it so I can have as much lines as i want in a cell
         cell.textLabel?.numberOfLines = 0
         
         return cell

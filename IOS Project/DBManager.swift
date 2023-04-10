@@ -36,7 +36,7 @@ class DBManager {
     }
     
     func createTable() {
-        let createTableString = "CREATE TABLE IF NOT EXISTS contacts(Id INTEGER AUTO_INCREMENT PRIMARY KEY, first_name TEXT, last_name TEXT, email TEXT, address TEXT, phone TEXT, notes TEXT);"
+        let createTableString = "CREATE TABLE IF NOT EXISTS contacts(Id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, email TEXT, address TEXT, phone TEXT, notes TEXT);"
         var createTableStatement: OpaquePointer? = nil
         //prepare the database for the statement
         if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK
@@ -82,7 +82,7 @@ class DBManager {
     
     func edit(first_name:String, last_name:String, email:String, address:String, phone:String, notes:String, id:Int) {
         
-        let editStatementSql = "UPDATE contacts SET first_name = '\(first_name)', last_name = '\(last_name)', email = '\(email)', address = '\(address)', phone = '\(phone)', notes = '\(notes)' WHERE id = \(id)"
+        let editStatementSql = "UPDATE contacts SET first_name = '\(first_name)', last_name = '\(last_name)', email = '\(email)', address = '\(address)', phone = '\(phone)', notes = '\(notes)' WHERE Id = \(id)"
         var editStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, editStatementSql, -1, &editStatement, nil) == SQLITE_OK {
 
@@ -114,7 +114,7 @@ class DBManager {
                    let address = String(describing: String(cString: sqlite3_column_text(queryStatement, 4)))
                    let phone = String(describing: String(cString: sqlite3_column_text(queryStatement, 5)))
                    let notes = String(describing: String(cString: sqlite3_column_text(queryStatement, 6)))
-                   
+                   print(id)
                    
                    dataset.append(Contact(id: Int(id), first_name: first_name, last_name: last_name, email: email, address: address, phone: phone, notes: notes))
                }
