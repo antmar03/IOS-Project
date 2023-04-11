@@ -26,7 +26,8 @@ class AddContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //background tap function declared in ViewController
+        self.hideKeyboardOnTap()
     }
     
     func isEmailValid(email: String) -> Bool {

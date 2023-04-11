@@ -189,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58J-nz-851" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2091" y="-157"/>
+            <point key="canvasLocation" x="1514" y="6"/>
         </scene>
         <!--Credits-->
         <scene sceneID="rNp-P4-Ris">
@@ -421,15 +421,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNn-nK-avw">
-                                <rect key="frame" x="77" y="302" width="238" height="102"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="102" id="Tbx-ru-2pl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R1-vo-cO9">
                                 <rect key="frame" x="163" y="547" width="67" height="35"/>
                                 <state key="normal" title="Button"/>
@@ -448,6 +439,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8l-9B-3Mf">
                                 <rect key="frame" x="277" y="63" width="74" height="35"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Delete"/>
@@ -455,6 +447,23 @@
                                     <action selector="onDeleteClick:" destination="lob-m0-vqG" eventType="touchUpInside" id="Qy6-Vx-YHg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hM7-ba-xed">
+                                <rect key="frame" x="146" y="640" width="102" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save Note"/>
+                                <connections>
+                                    <action selector="onSaveNote:" destination="lob-m0-vqG" eventType="touchUpInside" id="Qka-oG-mPJ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-CP-fnd">
+                                <rect key="frame" x="78" y="299" width="239" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="DgY-Bi-Eie"/>
+                                    <constraint firstAttribute="height" constant="159" id="E3d-he-9Nh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KuZ-OP-bas"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -462,38 +471,41 @@
                             <constraint firstItem="OG7-fA-EEu" firstAttribute="top" secondItem="Ppn-k2-Ua7" secondAttribute="bottom" constant="8" symbolic="YES" id="2Yv-Fo-v4s"/>
                             <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="53x-d8-LiK" secondAttribute="trailing" constant="170" id="3Ys-mf-ne9"/>
                             <constraint firstItem="IBM-tY-adX" firstAttribute="top" secondItem="ni3-uL-P7y" secondAttribute="bottom" constant="8" symbolic="YES" id="3aC-DL-agP"/>
+                            <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="hM7-ba-xed" secondAttribute="trailing" constant="145" id="41L-CS-mkC"/>
                             <constraint firstItem="3dC-VU-9ZW" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="77" id="6cb-Qs-WaV"/>
                             <constraint firstItem="F8l-9B-3Mf" firstAttribute="top" secondItem="KuZ-OP-bas" secondAttribute="top" constant="63" id="7Ar-JE-fch"/>
                             <constraint firstItem="p5h-v5-Hid" firstAttribute="leading" secondItem="OG7-fA-EEu" secondAttribute="trailing" constant="45" id="8jX-WS-7Qf"/>
                             <constraint firstItem="Ude-U4-owS" firstAttribute="top" secondItem="ye5-BV-eli" secondAttribute="bottom" constant="8" symbolic="YES" id="Emv-wK-tqr"/>
                             <constraint firstItem="ni3-uL-P7y" firstAttribute="top" secondItem="KuZ-OP-bas" secondAttribute="top" constant="117" id="FXD-FU-huv"/>
                             <constraint firstItem="1R1-vo-cO9" firstAttribute="top" secondItem="53x-d8-LiK" secondAttribute="bottom" constant="30" id="G9c-Im-qUA"/>
+                            <constraint firstItem="hM7-ba-xed" firstAttribute="top" secondItem="1R1-vo-cO9" secondAttribute="bottom" constant="58" id="GFt-oK-5ZR"/>
                             <constraint firstItem="3dC-VU-9ZW" firstAttribute="top" secondItem="KuZ-OP-bas" secondAttribute="top" constant="117" id="GoO-R0-DAE"/>
                             <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="ni3-uL-P7y" secondAttribute="trailing" constant="176" id="HDa-LU-DzC"/>
+                            <constraint firstItem="hM7-ba-xed" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="146" id="Hsd-Mw-Pfl"/>
                             <constraint firstItem="53x-d8-LiK" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="169" id="JTQ-8U-nhj"/>
                             <constraint firstItem="1R1-vo-cO9" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="163" id="Jna-2M-axH"/>
                             <constraint firstItem="iGV-cz-qqG" firstAttribute="top" secondItem="dTU-hD-8mG" secondAttribute="bottom" constant="8" symbolic="YES" id="Oaa-NW-EV2"/>
+                            <constraint firstItem="yA2-CP-fnd" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="78" id="ScH-zs-dJ9"/>
                             <constraint firstItem="IBM-tY-adX" firstAttribute="leading" secondItem="ye5-BV-eli" secondAttribute="trailing" constant="11" id="UQq-bn-Lke"/>
-                            <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="sNn-nK-avw" secondAttribute="trailing" constant="78" id="Wev-n3-XEu"/>
+                            <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="yA2-CP-fnd" secondAttribute="trailing" constant="76" id="Uvc-D3-8T9"/>
                             <constraint firstItem="ye5-BV-eli" firstAttribute="top" secondItem="3dC-VU-9ZW" secondAttribute="bottom" constant="8" symbolic="YES" id="XUI-Tt-UAY"/>
                             <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="nTS-Ik-bbv" secondAttribute="trailing" constant="265" id="ZJ8-X7-Swp"/>
                             <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="F8l-9B-3Mf" secondAttribute="trailing" constant="42" id="aPz-Pd-4oe"/>
+                            <constraint firstItem="yA2-CP-fnd" firstAttribute="top" secondItem="nTS-Ik-bbv" secondAttribute="bottom" constant="16" id="bA5-gC-acP"/>
                             <constraint firstItem="ni3-uL-P7y" firstAttribute="leading" secondItem="3dC-VU-9ZW" secondAttribute="trailing" constant="11" id="bhA-7T-N7g"/>
                             <constraint firstItem="iGV-cz-qqG" firstAttribute="leading" secondItem="Ppn-k2-Ua7" secondAttribute="trailing" constant="30" id="eBL-Oc-Son"/>
-                            <constraint firstItem="53x-d8-LiK" firstAttribute="top" secondItem="sNn-nK-avw" secondAttribute="bottom" constant="78" id="eYC-hc-AYe"/>
                             <constraint firstItem="p5h-v5-Hid" firstAttribute="top" secondItem="iGV-cz-qqG" secondAttribute="bottom" constant="9" id="fWJ-0C-tzR"/>
                             <constraint firstItem="Ppn-k2-Ua7" firstAttribute="top" secondItem="Ude-U4-owS" secondAttribute="bottom" constant="8" symbolic="YES" id="fnc-YW-1Jh"/>
                             <constraint firstItem="dTU-hD-8mG" firstAttribute="leading" secondItem="Ude-U4-owS" secondAttribute="trailing" constant="52" id="hLX-uY-2oR"/>
                             <constraint firstItem="nTS-Ik-bbv" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="78" id="iwx-QN-Qqc"/>
                             <constraint firstItem="nTS-Ik-bbv" firstAttribute="top" secondItem="OG7-fA-EEu" secondAttribute="bottom" constant="8" symbolic="YES" id="lHh-fg-mjf"/>
-                            <constraint firstItem="sNn-nK-avw" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="77" id="lHp-kK-xiS"/>
-                            <constraint firstItem="sNn-nK-avw" firstAttribute="top" secondItem="nTS-Ik-bbv" secondAttribute="bottom" constant="19" id="m37-44-KWi"/>
                             <constraint firstItem="KuZ-OP-bas" firstAttribute="trailing" secondItem="1R1-vo-cO9" secondAttribute="trailing" constant="163" id="rSb-Lv-hhy"/>
                             <constraint firstItem="ye5-BV-eli" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="77" id="sb3-AZ-Id9"/>
                             <constraint firstItem="Ppn-k2-Ua7" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="77" id="tvm-Co-aVZ"/>
                             <constraint firstItem="OG7-fA-EEu" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="77" id="w9Z-z3-I0a"/>
                             <constraint firstItem="Ude-U4-owS" firstAttribute="leading" secondItem="KuZ-OP-bas" secondAttribute="leading" constant="77" id="wZi-lI-b6c"/>
                             <constraint firstItem="dTU-hD-8mG" firstAttribute="top" secondItem="IBM-tY-adX" secondAttribute="bottom" constant="8" symbolic="YES" id="weu-mq-4yt"/>
+                            <constraint firstItem="53x-d8-LiK" firstAttribute="top" secondItem="yA2-CP-fnd" secondAttribute="bottom" constant="24" id="zTB-le-SA2"/>
                         </constraints>
                     </view>
                     <connections>
@@ -501,7 +513,7 @@
                         <outlet property="emailLabel" destination="dTU-hD-8mG" id="v62-DI-7se"/>
                         <outlet property="fnameLabel" destination="ni3-uL-P7y" id="5wv-ES-ySM"/>
                         <outlet property="lnameLabel" destination="IBM-tY-adX" id="IzI-jg-aLo"/>
-                        <outlet property="notesLabel" destination="sNn-nK-avw" id="k5u-w7-p1G"/>
+                        <outlet property="notesField" destination="yA2-CP-fnd" id="qWh-WC-Xdk"/>
                         <outlet property="phoneLabel" destination="p5h-v5-Hid" id="D2Z-0Y-TWy"/>
                     </connections>
                 </viewController>

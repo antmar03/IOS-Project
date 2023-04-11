@@ -28,7 +28,7 @@ class EditContactViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardOnTap()
         notesLabel.text = notes
         phoneLabel.text = phone
         addressLabel.text = address

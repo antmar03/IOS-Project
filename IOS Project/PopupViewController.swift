@@ -25,6 +25,7 @@ class PopupViewController: UIViewController {
     
     @IBOutlet weak var notesLabel: UILabel!
     
+    @IBOutlet weak var notesField: UITextField!
     let db = DBManager()
     
     override func viewDidLoad() {
@@ -35,7 +36,7 @@ class PopupViewController: UIViewController {
         emailLabel.text = email
         addressLabel.text = address
         phoneLabel.text = phone
-        notesLabel.text = notes
+        notesField.text = notes
         // Do any additional setup after loading the view.
     }
     
@@ -48,6 +49,7 @@ class PopupViewController: UIViewController {
     }
     
     @IBAction func onDeleteClick(_ sender: UIButton) {
+	
         let msg = "Are you sure you want to delete this?\nThis cannot be undone!!"
         
         let alert = UIAlertController(title: "Are You Sure?", message: msg, preferredStyle: .alert)
@@ -68,6 +70,8 @@ class PopupViewController: UIViewController {
         alert.addAction(yes);
         alert.addAction(no);
         
+        present(alert, animated: true)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -85,6 +89,11 @@ class PopupViewController: UIViewController {
             vc.id = id
             
         }
+    }
+    
+    
+    @IBAction func onSaveNote(_ sender: UIButton) {
+        db.edit(first_name: first_name!, last_name: last_name!, email: email!, address: address!, phone: phone!, notes: notesField.text!, id: id!)
     }
     
     /*
