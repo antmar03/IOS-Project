@@ -67,7 +67,7 @@ class PopupViewController: UIViewController {
         
         alert.addAction(yes);
         alert.addAction(no);
-        present(alert, animated: false)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
